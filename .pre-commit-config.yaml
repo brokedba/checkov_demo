@@ -1,0 +1,32 @@
+repos:
+- repo: https://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.89.1 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+  hooks:
+    - id: terraform_checkov
+      args:
+        - --args=--quiet
+        - --args=--skip-check CKV2_AWS_8
+        - --args=--framework terraform
+        - --args=--compact
+        - --args=--file code/deployment_ec2.tf
+    - id: terraform_tflint
+      args:
+        - --args=--call-module-type=all
+        - --args=--enable-rule=terraform_documented_variables
+        - --args=--disable-rule=terraform_required_version
+# https://github.com/terraform-linters/tflint-ruleset-terraform/tree/v0.7.0/docs/rules
+#   - id: terraform_validate
+#      args:
+#        - --args=-json
+#        - --args=-no-color
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: check-yaml
+    - id: debug-statements
+    - id: double-quote-string-fixer
+    - id: name-tests-test
+    - id: requirements-txt-fixer
