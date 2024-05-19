@@ -12,4 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
+    - run: |
+         sudo apt-get install -y tflint
+         pip3 install --no-cache-dir checkov
     - uses: pre-commit/action@v3.0.1
