@@ -1,6 +1,6 @@
 resource "aws_instance" "web_host" {
   # ec2 have plain text secrets in user data
-  ami           = var.ami
+  ami           = ${var.ami}
   instance_type = "t2.nano"
 
   vpc_security_group_ids = [
@@ -15,7 +15,7 @@ sudo systemctl enable apache2
 export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMAAA
 export AWS_SECRET_ACCESS_KEY=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
 export AWS_DEFAULT_REGION=us-west-2
-echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
+echo "<h2>Deployed via Terraform</h2>" | sudo tee /var/www/html/index.html
 EOF
 
 }
