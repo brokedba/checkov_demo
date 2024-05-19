@@ -1,6 +1,26 @@
 # checkov_demo
 demo for hashicorp User group workshop 2024
 
+# PRE-COMMIT
+
+1. Switch to the main branch (if you are not already on it):
+
+```
+git checkout main
+```
+2. Create the .gitattributes file:
+```
+echo ".pre-commit-config.yaml merge=preco" > .gitattributes
+```
+3. Add and commit the file:
+
+```
+git add .gitattributes
+git commit -m "Add .gitattributes to keep .pre-commit-config.yaml during merges"
+git push origin main
+```
+After completing these steps, the .gitattributes file will be present in the main branch. When you merge a feature branch into the main branch in the future, Git will use the merge strategy specified in .gitattributes to keep the version of .pre-commit-config.yaml from the main branch and ignore changes from the feature branch.
+
 # Setting Up a `preco` Branch with Pre-Commit Configuration
 
 ## Step-by-Step Guide
