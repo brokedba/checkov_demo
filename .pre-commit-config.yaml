@@ -6,7 +6,7 @@ repos:
       args:
         - --args=--quiet
         - --args=--skip-check CKV2_AWS_8
-        - --args=--check HIGH
+        - --args=--check MEDIUM
         - --args=--framework terraform
         - --args=--compact
         - --args=--file code/deployment_ec2.tf
