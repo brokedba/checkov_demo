@@ -22,7 +22,7 @@ jobs:
         quiet: true # optional: display only failed checks
         framework: terraform
         #soft_fail: true
-        #soft_fail: true
+        #compact: true
         #api-key: ${{ secrets.BC_API_KEY }}
       #env:
         #PRISMA_API_URL: https://api4.prismacloud.io
