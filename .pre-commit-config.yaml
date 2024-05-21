@@ -6,10 +6,16 @@ repos:
       args:
         - --args=--quiet
         - --args=--skip-check CKV2_AWS_8
-        - --args=--check LOW
+     #  - --args=--check LOW,MEDIUM,HIGH,CRITICAL
+     #   - --args=--check CKV_AWS_186
         - --args=--framework terraform
         - --args=--compact
         - --args=--file code/deployment_ec2.tf
+
+
+
+
+
 #    - id: terraform_tflint
 #      args:
 #        - --args=--call-module-type=all
