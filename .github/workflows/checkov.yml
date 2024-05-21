@@ -21,7 +21,7 @@ jobs:
         directory: code/
         quiet: true # optional: display only failed checks
         framework: terraform
-        soft_fail: true
+        #soft_fail: true
         #soft_fail: true
         #api-key: ${{ secrets.BC_API_KEY }}
       #env:
