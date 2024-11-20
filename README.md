@@ -34,8 +34,7 @@ git checkout -b preco
 2. Create the .pre-commit-config.yaml File
 Create the .pre-commit-config.yaml file with the following content:
 
-```
-yaml : Copy code
+```yaml  
 
 repos:
 - repo: https://github.com/antonbabenko/pre-commit-terraform
