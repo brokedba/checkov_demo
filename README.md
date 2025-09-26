@@ -108,6 +108,8 @@ git clone https://github.com/brokedba/checkov_demo.git
 **2. install and run pre-commit**
 ```
 pip install pre-commit 
+# or using pipx
+pipx install pre-commit
 $ pre-commit --version
 pre-commit 3.7.1
 ```
